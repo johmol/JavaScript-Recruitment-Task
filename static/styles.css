@@ -1,10 +1,23 @@
-.spinner{
-  font-size: 140px;
-}
-.spinner:after {
-  content: '◌';
+.spinner {
+  width: 80px;
+  height: 80px;
+  background-image: url("../spinner-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 15px;
+  animation: spin 3.3s linear infinite;
 }
 
 #chart {
     border: 1px solid black;
+}
+
+@-webkit-keyframes spin {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
